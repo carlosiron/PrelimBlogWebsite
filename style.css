@@ -487,6 +487,7 @@
   height: 684px;
   top: 39px;
   left: 196px;
+  z-index: 1;
 }
 
 .article .rectangle {
@@ -496,6 +497,8 @@
   height: 683px;
   left: 0;
   background-color: #0f0f0f;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .article .text-wrapper {
@@ -524,6 +527,15 @@
   line-height: normal;
 }
 
+.article .text-wrapper,
+.article .p,
+.article .there-is-no-doubt {
+  position: absolute;
+  z-index: 2; /* Ensure text is above rectangle */
+  user-select: text; /* Explicitly enable text selection */
+  pointer-events: auto; /* Enable pointer events */
+}
+
 .article .text-wrapper-2 {
   position: absolute;
   width: 279px;
@@ -538,6 +550,21 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+}
+
+.article .text-wrapper-2 a,
+.article .text-wrapper-6 a {
+  color:#00eeff;
+  Text-decoration: none;
+}
+
+.article .text-wrapper-2 a:hover,
+.article .text-wrapper-6 a:hover,
+.article .text-wrapper-2 a:active,
+.article .text-wrapper-6 a:active,
+.article .text-wrapper-2 a:visited,
+.article .text-wrapper-6 a:visited {
+  color: #00eeff;
 }
 
 
@@ -596,6 +623,7 @@
   height: 685px;
   top: 38px;
   left: 1205px;
+  z-index: 1;
 }
 
 .article .rectangle-2 {
@@ -605,6 +633,7 @@
   height: 683px;
   left: 0;
   background-color: #0f0f0f;
+  z-index: -1;
 }
 
 .article .text-wrapper-3 {
@@ -618,6 +647,15 @@
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
+}
+
+.article .text-wrapper-3,
+.article .text-wrapper-4,
+.article .text-wrapper-5 {
+  position: absolute;
+  z-index: 2;
+  user-select: text;
+  pointer-events: auto;
 }
 
 .article .text-wrapper-4 {
@@ -821,20 +859,7 @@
   line-height: normal;
 }
 
-.article .text-wrapper-2 a,
-.article .text-wrapper-6 a {
-  color:#00eeff;
-  Text-decoration: none;
-}
 
-.article .text-wrapper-2 a:hover,
-.article .text-wrapper-6 a:hover,
-.article .text-wrapper-2 a:active,
-.article .text-wrapper-6 a:active,
-.article .text-wrapper-2 a:visited,
-.article .text-wrapper-6 a:visited {
-  color: #00eeff;
-}
 
 .article1 .text-wrapper a,
 .article1 .text-wrapper-2 a,
